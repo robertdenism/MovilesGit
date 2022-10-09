@@ -9,6 +9,6 @@ public class BotonesVertHor extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_botones);
+        setContentView(R.layout.activity_botones2);
     }
 }
