@@ -18,6 +18,7 @@ public class practicaFormulario1 extends AppCompatActivity {
     EditText inputNombre, inputTelefono, inputCorreo;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,17 +33,20 @@ public class practicaFormulario1 extends AppCompatActivity {
         inputCorreo = findViewById(R.id.inputCorreo);
         inputTelefono = findViewById(R.id.inputTelefono);
 
-        TextView.OnEditorActionListenernew variable = new TextView.OnEditorActionListener() {
+        Stirng nombre, correo;
+        int telefono;
+
+        inputNombre.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent keyEvent) {
-                if(actionId == EditorInfo.IME_ACTION_GO){
-                    textDatosIn.setText(inputNombre.getText());
-                    textDatosIn.setTextColor(Color.RED);
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if(i == EditorInfo.IME_ACTION_GO){
+                    telefono==(inputNombre.getText());
+
                 }
 
                 return false;
             }
-        };
+        });
         inputCorreo.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
@@ -55,7 +59,18 @@ public class practicaFormulario1 extends AppCompatActivity {
             }
         });
 
+        textDatosIn.setOnEditorActionListener(new TextView.OnEditorActionListener()){
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
 
+                    textDatosIn.setText(telefono,nombre,esgr);
+
+                    textDatosIn.setTextColor(Color.RED);
+                }
+
+                return false;
+            }
+        });
 
     }
 
