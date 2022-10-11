@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
@@ -33,15 +34,15 @@ public class practicaFormulario1 extends AppCompatActivity {
         inputCorreo = findViewById(R.id.inputCorreo);
         inputTelefono = findViewById(R.id.inputTelefono);
 
-        Stirng nombre, correo;
-        int telefono;
+
+        String array [] = new String[3];
 
         inputNombre.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 if(i == EditorInfo.IME_ACTION_GO){
-                    telefono==(inputNombre.getText());
-
+                    textDatosIn.setText(inputNombre.getText());
+                    textDatosIn.setTextColor(Color.RED);
                 }
 
                 return false;
@@ -58,21 +59,26 @@ public class practicaFormulario1 extends AppCompatActivity {
                 return false;
             }
         });
-
-        textDatosIn.setOnEditorActionListener(new TextView.OnEditorActionListener()){
+        inputTelefono.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-
-                    textDatosIn.setText(telefono,nombre,esgr);
-
-                    textDatosIn.setTextColor(Color.RED);
+                if(i == EditorInfo.IME_ACTION_GO){
+                  textDatosIn.setText(inputTelefono.getText());
+                  textDatosIn.setTextColor(Color.RED);
                 }
 
                 return false;
             }
         });
 
-    }
 
 
-}
+        }
+
+
+
+        }
+
+
+
+

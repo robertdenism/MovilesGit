@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/bPiedra"
+        android:layout_width="192dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toStartOf="@+id/bPapel"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/piedra" />
+
+    <ImageButton
+        android:id="@+id/bPapel"
+        android:layout_width="162dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageButton
+        android:id="@+id/bTijera"
+        android:layout_width="165dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bPiedra"
+        app:srcCompat="@drawable/tijera" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="122dp"
+        android:layout_height="33dp"
+        android:text="Piedra-Papel-Tijera"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Line2"
+        app:layout_constraintBottom_toTopOf="@+id/bPiedra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tMensaje"
+        android:layout_width="206dp"
+        android:layout_height="58dp"
+        android:text="Mensaje"
+        app:layout_constraintBottom_toTopOf="@+id/puntoMa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bTijera" />
+
+    <Button
+        android:id="@+id/reiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puntoMa" />
+
+    <TextView
+        android:id="@+id/puntoTu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tú"
+        app:layout_constraintBottom_toTopOf="@+id/reiniciar"
+        app:layout_constraintEnd_toStartOf="@+id/puntoMa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tMensaje" />
+
+    <TextView
+        android:id="@+id/puntoMa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Máquina"
+        app:layout_constraintBottom_toTopOf="@+id/reiniciar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/puntoTu"
+        app:layout_constraintTop_toBottomOf="@+id/tMensaje" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
