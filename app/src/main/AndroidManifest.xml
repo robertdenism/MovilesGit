@@ -40,6 +40,7 @@
             android:exported="true">
 
 
+
         </activity>
         <activity
             android:name=".U2.PiedraPapelTijera"
@@ -49,6 +50,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
     </application>
