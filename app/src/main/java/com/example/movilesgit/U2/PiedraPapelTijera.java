@@ -38,6 +38,9 @@ public class PiedraPapelTijera extends AppCompatActivity {
         puntoMa=findViewById(R.id.puntoMa);
 
 
+        puntoTu.setText("Tú "+ Integer.toString(cont1));
+        puntoMa.setText("Ma "+Integer.toString(cont2));
+
        bPiedra.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -46,11 +49,13 @@ public class PiedraPapelTijera extends AppCompatActivity {
                         valor=1;
                         valorM = Maquina();
                         if(valor<valorM && valorM!=2){
-                            tMensaje.setText("Ganas "+ cual(valorM));
+                            tMensaje.setText("GANAS \n HAS SACADO PIEDRA \n"+ cual(valorM));
+                            puntoTu.setText("Tú "+ Integer.toString(cont1++));
                         }else if(valor<valorM && valorM!=3) {
-                            tMensaje.setText("Gana la maquina "+ cual(valorM));
+                            tMensaje.setText("PIERDES \n HAS SACADO PIEDRA \n "+cual(valorM));
+                            puntoMa.setText("Ma "+Integer.toString(cont2++));
                         }else{
-                            tMensaje.setText("empate "+ cual(valorM));
+                            tMensaje.setText("EMPATE \n " +cual(valorM));
                         }
 
                     }
@@ -65,11 +70,13 @@ public class PiedraPapelTijera extends AppCompatActivity {
                         valor=2;
                         valorM = Maquina();
                         if(valorM>2){
-                            tMensaje.setText("Pierdes "+ cual(valorM));
+                            tMensaje.setText("PIERDES \n HAS SACADO PAPEL \n "+cual(valorM));
+                            puntoMa.setText("Ma "+Integer.toString(cont2++));
                         }else if(valor<2){
-                            tMensaje.setText("Has Ganado "+ cual(valorM) );
+                            tMensaje.setText("GANAS \n HAS SACADO PAPEL \n"+ cual(valorM));
+                            puntoTu.setText("Tú "+ Integer.toString(cont1++));
                         }else{
-                            tMensaje.setText("Empate"+ cual(valorM));
+                            tMensaje.setText("EMPATE \n " +cual(valorM));
                         }
 
                     }
@@ -82,13 +89,13 @@ public class PiedraPapelTijera extends AppCompatActivity {
                         valor=3;
                         valorM = Maquina();
                         if(valor>valorM && valorM!=1){
-                            tMensaje.setText("Ganas ");
-                            puntoTu.setText(Integer.toString(cont1++));
+                            tMensaje.setText("GANAS \n HAS SACADO TIJERA \n"+ cual(valorM));
+                            puntoTu.setText("Tú "+ Integer.toString(cont1++));
                         }else if(valor>valorM && valorM!=2) {
-                            tMensaje.setText("Gana la maquina ");
-                            puntoMa.setText(Integer.toString(cont2++));
+                            tMensaje.setText("PIERDES \n HAS SACADO TIJERA \n "+cual(valorM));
+                            puntoMa.setText("Ma "+Integer.toString(cont2++));
                         }else{
-                            tMensaje.setText("empate ");
+                            tMensaje.setText("EMPATE \n " +cual(valorM));
                         }
 
                     }
@@ -100,8 +107,8 @@ public class PiedraPapelTijera extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        puntoTu.setText(Integer.toString(cont1=0));
-                        puntoMa.setText(Integer.toString(cont2=0));
+                        puntoTu.setText("Tú "+Integer.toString(cont1=0));
+                        puntoMa.setText("M "+Integer.toString(cont2=0));
                     }
                 }
         );
@@ -125,14 +132,11 @@ public class PiedraPapelTijera extends AppCompatActivity {
                     vuelta = " MAQUINA SACÓ PAPEL";
                     break;
                 case 3:
-                    vuelta = " MAQUINA SACÓ PIEDRA";
+                    vuelta = " MAQUINA SACÓ TIJERA";
                     break;
             }
             return vuelta;
         }
-
-
-
 
     }
 
