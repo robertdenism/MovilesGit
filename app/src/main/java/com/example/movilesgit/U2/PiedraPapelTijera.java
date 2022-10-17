@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import com.example.movilesgit.R;
 
-import java.util.Random;
-
 public class PiedraPapelTijera extends AppCompatActivity {
 
 
@@ -47,13 +45,13 @@ public class PiedraPapelTijera extends AppCompatActivity {
                     public void onClick(View view) {
 
                         valor=1;
-                        valorM = Maquina();
+                        valorM = maquina();
                         if(valor<valorM && valorM!=2){
                             tMensaje.setText("GANAS \n HAS SACADO PIEDRA \n"+ cual(valorM));
-                            puntoTu.setText("Tú "+ Integer.toString(cont1++));
+                            puntoTu.setText("Tú "+ Integer.toString(++cont1));
                         }else if(valor<valorM && valorM!=3) {
                             tMensaje.setText("PIERDES \n HAS SACADO PIEDRA \n "+cual(valorM));
-                            puntoMa.setText("Ma "+Integer.toString(cont2++));
+                            puntoMa.setText("Ma "+Integer.toString(++cont2));
                         }else{
                             tMensaje.setText("EMPATE \n " +cual(valorM));
                         }
@@ -68,13 +66,13 @@ public class PiedraPapelTijera extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         valor=2;
-                        valorM = Maquina();
+                        valorM = maquina();
                         if(valorM>2){
                             tMensaje.setText("PIERDES \n HAS SACADO PAPEL \n "+cual(valorM));
-                            puntoMa.setText("Ma "+Integer.toString(cont2++));
+                            puntoMa.setText("Ma "+Integer.toString(++cont2));
                         }else if(valor<2){
                             tMensaje.setText("GANAS \n HAS SACADO PAPEL \n"+ cual(valorM));
-                            puntoTu.setText("Tú "+ Integer.toString(cont1++));
+                            puntoTu.setText("Tú "+ Integer.toString(++cont1));
                         }else{
                             tMensaje.setText("EMPATE \n " +cual(valorM));
                         }
@@ -87,13 +85,13 @@ public class PiedraPapelTijera extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         valor=3;
-                        valorM = Maquina();
+                        valorM = maquina();
                         if(valor>valorM && valorM!=1){
                             tMensaje.setText("GANAS \n HAS SACADO TIJERA \n"+ cual(valorM));
-                            puntoTu.setText("Tú "+ Integer.toString(cont1++));
+                            puntoTu.setText("Tú "+ Integer.toString(++cont1));
                         }else if(valor>valorM && valorM!=2) {
                             tMensaje.setText("PIERDES \n HAS SACADO TIJERA \n "+cual(valorM));
-                            puntoMa.setText("Ma "+Integer.toString(cont2++));
+                            puntoMa.setText("Ma "+Integer.toString(++cont2));
                         }else{
                             tMensaje.setText("EMPATE \n " +cual(valorM));
                         }
@@ -117,7 +115,7 @@ public class PiedraPapelTijera extends AppCompatActivity {
 
 
 
-        public int Maquina() {
+        public int maquina() {
             int M = (int) (Math.random() * 3 + 1);
             return M;
         }
