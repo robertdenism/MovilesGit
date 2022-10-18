@@ -1,10 +1,12 @@
-package com.example.movilesgit;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.movilesgit.primeras;
 
 import android.os.Bundle;
 
-public class MainActivity2 extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.movilesgit.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

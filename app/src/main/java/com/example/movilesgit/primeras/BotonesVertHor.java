@@ -1,8 +1,10 @@
-package com.example.movilesgit;
+package com.example.movilesgit.primeras;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.movilesgit.R;
 
 public class BotonesVertHor extends AppCompatActivity {
 

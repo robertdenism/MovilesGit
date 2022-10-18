@@ -1,14 +1,16 @@
-package com.example.movilesgit;
+package com.example.movilesgit.primeras;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ContadorGrande extends AppCompatActivity {
+import com.example.movilesgit.R;
+
+public class Pruebas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contgrande);
+        setContentView(R.layout.activity_pruebas);
     }
 }

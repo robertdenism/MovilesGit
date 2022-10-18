@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.example.movilesgit.R;
 
@@ -33,8 +32,6 @@ public class CambioPantalla extends AppCompatActivity {
                     }
                 }
         );
-
-
     }
 
     private void lanzar(){
