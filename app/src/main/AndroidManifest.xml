@@ -14,10 +14,13 @@
         android:theme="@style/Theme.MovilesGit"
         tools:targetApi="31">
         <activity
-            android:name=".ResumenViaje"
-            android:exported="false" />
+            android:name=".U2.pruebas.Pantalla3"
+            android:exported="true" />
         <activity
-            android:name=".U2.taxi.PrimeraTaxi"
+            android:name=".U2.pruebas.Pantalla2"
+            android:exported="true" />
+        <activity
+            android:name=".U2.pruebas.PantallaPrincipal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,11 +29,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".U2.taxi.ResumenViaje"
+            android:exported="true" />
+        <activity
+            android:name=".U2.taxi.PrimeraTaxi"
+            android:exported="true" />
+        <activity
             android:name=".U2.Pantalla2"
             android:exported="false" />
         <activity
             android:name=".U2.CambioPantalla"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".primeras.MainActivity"
             android:exported="true" />
