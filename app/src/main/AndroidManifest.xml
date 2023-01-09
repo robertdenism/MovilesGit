@@ -14,6 +14,15 @@
         android:theme="@style/Theme.MovilesGit"
         tools:targetApi="31">
         <activity
+            android:name=".MainLiveData"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".PreExamen.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -30,7 +39,7 @@
             android:exported="true" />
         <activity
             android:name=".U2.pruebas.PantallaPrincipal"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".U2.taxi.ResumenViaje"
             android:exported="true" />
