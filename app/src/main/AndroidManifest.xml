@@ -14,7 +14,16 @@
         android:theme="@style/Theme.MovilesGit"
         tools:targetApi="31">
         <activity
-            android:name=".MainLiveData"
+            android:name=".U2.PruebaLiveData.AleatorioUI"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".U2.PruebaLiveData.MainLiveData"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
