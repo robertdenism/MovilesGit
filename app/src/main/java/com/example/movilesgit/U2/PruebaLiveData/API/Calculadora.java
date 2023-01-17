@@ -24,7 +24,7 @@ public class Calculadora extends AppCompatActivity {
 
         inMuestra = findViewById(R.id.muestrame);
 
-        Call<Resultado> llamada = MatesAPI.getInstance().suma(7,8);
+        Call<Resultado> llamada = MatesAPI.getInstance().suma(7,8);//aqui meter numeros desde teclado
         llamada.enqueue(new Callback<Resultado>() {
             @Override
             public void onResponse(Call<Resultado> call, Response<Resultado> response) {
